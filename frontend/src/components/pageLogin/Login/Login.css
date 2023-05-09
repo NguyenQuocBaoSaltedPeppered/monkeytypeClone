@@ -1,0 +1,17 @@
+.login.side .title {
+  grid-area: titleArea;
+}
+
+.login.side form {
+  grid-area: formArea;
+}
+
+.side.login {
+  display: grid;
+  grid-template-areas: 'titleArea forgot-password-buttonArea' 'formArea formArea';
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: var(--error-color);
+}

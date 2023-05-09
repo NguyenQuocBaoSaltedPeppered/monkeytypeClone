@@ -1,0 +1,70 @@
+.page-login {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  grid-auto-flow: column;
+  justify-content: space-around;
+}
+
+.page-login .side {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.page-login form {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.input-and-indicator {
+  position: relative;
+}
+
+.page-login .side input {
+  width: 15rem;
+}
+
+.input-and-indicator .status-indicator {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 2.25rem;
+  grid-template-rows: 2.25rem;
+  height: 2.25rem;
+  place-items: center center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2.25rem;
+}
+
+.input-and-indicator .status-indicator .indicator.level1 {
+  color: var(--main-color);
+}
+
+.input-and-indicator .status-indicator .indicator.level-1 {
+  color: var(--error-color);
+}
+
+.input-and-indicator .status-indicator .indicator.level0 {
+  color: var(--sub-color);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.input-and-indicator .status-indicator .indicator {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+

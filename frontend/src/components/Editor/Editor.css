@@ -1,0 +1,148 @@
+#game-container{
+    position: relative;
+    align-items: center;
+    gap: 1rem;
+    grid-auto-flow: row;
+    justify-content: center;
+    display: grid;
+}
+#game-container .timer{
+    position: relative;
+    color: var(--main-color);
+    display: grid;
+    justify-content: center;
+    font-size: 4rem;
+    bottom: 5rem;
+    pointer-events: none;
+}
+#words-wrapper {
+    position: relative;
+    height: 200px   ;
+    display: block;
+    color: var(--sub-color);
+}
+.words{
+    gap: 5px;
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-bottom: 1em;
+    user-select: none;
+    width: 100%;
+    transition: none 0s ease 0s;
+    font-size: 1.7rem;
+}
+.word{
+    border-left: 1px solid transparent;
+    line-height: 1.5rem;
+    margin: .37rem;
+    pointer-events: none;
+}
+.word .letter{
+    border-right: 1px solid transparent;
+    display: inline-block;
+    border-bottom: .05em solid transparent;
+}
+.word.caret{
+    border-left: 1px solid var(--main-color);
+    -webkit-animation: word-borderBlink 0.8s step-end infinite;    
+    animation: word-borderBlink 0.8s step-end infinite;    
+}
+.letter.caret{
+    border-right: 1px solid var(--main-color);
+    -webkit-animation: borderBlink 0.8s step-end infinite;    
+    animation: borderBlink 0.8s step-end infinite;    
+}
+@-webkit-keyframes word-borderBlink {    
+    from, to {    
+        border-left-color: var(--main-color)  
+    }    
+    50% {    
+        border-left-color: transparent    
+    }    
+}    
+@keyframes word-borderBlink {    
+    from, to {
+        border-left-color: var(--main-color)  
+    }    
+    50% {    
+        border-left-color: transparent
+    }    
+}
+@-webkit-keyframes borderBlink {    
+    from, to {    
+        border-right-color: var(--main-color)  
+    }    
+    50% {    
+        border-right-color: transparent    
+    }    
+}    
+@keyframes borderBlink {    
+    from, to {    
+        border-right-color: var(--main-color)  
+    }    
+    50% {    
+        border-right-color: transparent
+    }    
+}
+#restart-button{
+    color: var(--sub-color);
+    margin: 5rem auto 0;
+    border-radius: var(--roundness);
+    cursor: pointer;
+    padding: 1rem 2rem;
+    position: relative;
+    transition: .125s;
+    width: min-content;  
+}
+#restart-button:hover{
+    color: var(--text-color);
+}
+#words-input{
+    border: none;
+    cursor: default;
+    display: block;
+    margin: 0;
+    opacity: 0;
+    outline: none;
+    padding: 0;
+    pointer-events: none;
+    position: fixed;
+    resize: none;
+    z-index: -1;
+}
+.blurred{
+    transition: all 0.5s ease 0s, transform 0.25s ease 0s;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    opacity: .25;
+}
+#outFocusWarning{
+    text-align: center;
+    height: 0;
+    line-height: 300px;
+    position: relative;
+    z-index: 999;
+    color: var(--text-color);
+    cursor: default;
+    pointer-events: none;
+}
+#outFocusWarning.hidden{
+    transition: all 0.25s ease 0s, transform 0.5s ease 0s;
+    display: none!important;
+}
+.countdown-timer{
+    color: var(--main-color);
+    display: grid;
+    font-size: 8rem;
+    height: 0;
+    justify-content: center;
+    left: 0;
+    line-height: 0;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 100;
+    margin: 5rem;
+}

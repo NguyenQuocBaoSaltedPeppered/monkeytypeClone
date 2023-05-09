@@ -1,0 +1,230 @@
+.page-account .content {
+  display: grid;
+  gap: 2rem;
+}
+
+.profile {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    'info info'
+    'pbs-time pbs-words';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+}
+/*  */
+.profile .details.none {
+  grid-template-areas: 'info sep1 typing-stats ';
+  grid-template-columns: 20rem auto 1fr;
+}
+
+.profile .details {
+  align-content: center;
+  display: grid;
+  grid-auto-flow: column;
+  background: var(--sub-alt-color);
+  border-radius: var(--roundness);
+  gap: 1rem;
+  grid-area: info / info / info / info;
+  padding: 1rem;
+}
+
+.page-account .profile .details {
+  padding-right: 3rem;
+}
+
+.profile .details .typing-stats.vertical {
+  grid-auto-flow: row;
+}
+
+.profile .details.none .typing-stats {
+  align-items: center;
+  align-self: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.profile .details .typing-stats {
+  align-content: space-around;
+  align-self: stretch;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.profile .details .typing-stats {
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.profile .details .info .name {
+  font-size: 1rem;
+  line-height: 100%;
+  min-width: 10rem;
+  color: var(--main-color);
+}
+
+.profile .details .info {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto 1fr;
+}
+
+.mode-title {
+  color: var(--sub-color);
+  font-size: 1rem;
+  max-width: 2rem;
+}
+
+.page-account .profile .pbs-time,
+.page-account .profile .pbs-words {
+  padding-right: 2rem;
+}
+
+.page-account .info {
+  font-size: 1.5rem;
+  grid-area: info;
+}
+
+.profile .details,
+.profile .pbs-time,
+.profile .pbs-words {
+  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: baseline;
+  position: relative;
+  user-select: none;
+  background: var(--sub-alt-color);
+  border-radius: var(--roundness);
+  padding: 1rem;
+}
+
+.profile .pbs-time {
+  display: grid;
+  gap: 1rem;
+  grid-area: pbs-time / pbs-time / pbs-time;
+}
+
+.profile .details {
+  align-content: center;
+  background: var(--sub-alt-color);
+  border-radius: var(--roundness);
+  display: grid;
+  gap: 1rem 1rem;
+  grid-area: info / info / info / info;
+  grid-auto-flow: column;
+  padding: 1rem;
+}
+
+.profile .details,
+.profile .pbs-time,
+.profile .pbs-words {
+  align-items: center;
+  align-content: center;
+  background: var(--sub-alt-color);
+  border-radius: var(--roundness);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: baseline;
+  padding: 1rem;
+  position: relative;
+  user-select: none;
+}
+
+.profile .details .separator {
+  background: var(--bg-color);
+  border-radius: var(--roundness);
+  height: 100%;
+  width: 0.5rem;
+}
+
+.profile .details .sep1 {
+  grid-area: sep1 / sep1 / sep1 / sep1;
+}
+
+.profile .details .bioAndKeyboard.vertical,
+.profile .details .typing-stats.vertical {
+  grid-auto-flow: row;
+}
+
+.profile .details .bioAndKeyboard,
+.profile .details .typing-stats {
+  align-content: space-around;
+  align-self: stretch;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.profile .title {
+  color: var(--error-color);
+  font-size: 0.8rem;
+}
+
+.profile .value {
+  font-size: 2rem;
+  line-height: 1.9rem;
+}
+
+.profile .details .group,
+.profile .pbs-time .group,
+.profile .pbs-words .group {
+  display: grid;
+  grid-template-areas: 'center';
+  justify-self: center;
+  gap: 0.25rem;
+}
+
+.profile .details .group .quick,
+.profile .pbs-time .group .quick,
+.profile .pbs-words .group .quick {
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+  gap: 0.25rem;
+}
+
+.profile .details .group .fullTest,
+.profile .details .group .quick,
+.profile .pbs-time .group .fullTest,
+.profile .pbs-time .group .quick,
+.profile .pbs-words .group .fullTest,
+.profile .pbs-words .group .quick {
+  grid-area: center / center / center / center;
+}
+
+.profile .details .group .quick .test,
+.profile .pbs-time .group .quick .test,
+.profile .pbs-words .group .quick .test {
+  align-content: end;
+  color: var(--sub-color);
+  font-size: 0.8em;
+  line-height: 100%;
+}
+
+.profile .details .group .quick .wpm,
+.profile .pbs-time .group .quick .wpm,
+.profile .pbs-words .group .quick .wpm {
+  align-content: center;
+  font-size: 2.5em;
+  line-height: 100%;
+}
+
+.profile .details .group .quick .acc,
+.profile .pbs-time .group .quick .acc,
+.profile .pbs-words .group .quick .acc {
+  font-size: 1.5em;
+  line-height: 100%;
+  opacity: 0.75;
+}
+
+.profile .details .group .quick .acc,
+.profile .details .group .quick .test,
+.profile .details .group .quick .wpm,
+.profile .pbs-time .group .quick .acc,
+.profile .pbs-time .group .quick .test,
+.profile .pbs-time .group .quick .wpm,
+.profile .pbs-words .group .quick .acc,
+.profile .pbs-words .group .quick .test,
+.profile .pbs-words .group .quick .wpm {
+  display: grid;
+}

@@ -1,0 +1,152 @@
+.result{
+  min-height: 10vh;
+  display: grid;
+  align-items: center;
+  row-gap: 5rem;
+} 
+.stats {
+  align-items: flex-start;
+  column-gap: 6rem;
+  grid-auto-flow: column; 
+  grid-template-areas: none;
+  justify-content: space-between;
+  display: grid;
+  opacity: 1;
+  cursor: default;
+  width: 100%;
+}
+.stats .top{
+  color: var(--sub-color);
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-bottom: .25rem;
+}
+.stats .bottom{
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--main-color);
+  position: relative;
+}
+.result .buttons{
+  display: grid;
+  gap: 5rem;
+  grid-auto-flow: column;
+  grid-column: 1/3;
+  justify-content: center;
+}
+.result .buttons .button{
+  border-radius: var(--roundness);
+  background-color: var(--bg-color);
+  color: var(--sub-color);
+  cursor: pointer;
+  padding: 1rem 2rem;
+  position: relative;
+  transition: .125s;
+  width: min-content;
+  width: -moz-min-content;
+}
+.result .buttons .button:active{
+  background-color: var(--text-color);
+}
+.bottoms{
+  display: grid;
+  row-gap: 2rem;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.result-history {
+  display: inline-block;
+  grid-auto-flow: row;
+  font-size: 1.2rem;
+  color: var(--sub-color);
+  margin-bottom: 0rem;
+  cursor: default;
+  align-items: center;
+  align-content: center;
+  max-width: 30rem;
+  justify-content: center;
+}
+
+.result-history .title{
+  margin-bottom: .25rem;
+  user-select: none;
+}
+.result-history .words-history{
+  align-content: center;
+  flex-wrap: wrap;
+}
+.result-history .words-history .word{
+  margin: .18rem .6rem .15rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+
+/* from https://codepen.io/thoward27/pen/vGKPLK */
+[data-balloon] { 
+    position: relative; }
+    [data-balloon]::before {
+      opacity: 0;
+      pointer-events: none;
+      transition: all .18s ease-out;
+      background: rgba(17, 17, 17, 0.9);
+      border-radius: 4px;
+      color: var(--text-color);
+      content: attr(data-balloon);
+      font-size: 15px;
+      padding: .5em 1em;
+      position: absolute;
+      white-space: nowrap;
+      z-index: 10; }
+    [data-balloon]::after {
+      background: no-repeat url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(0)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>');
+      background-size: 100% auto;
+      width: 18px;
+      height: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all .18s ease-out;
+      content: '';
+      position: absolute;
+      z-index: 10; }
+    [data-balloon]:hover::before, [data-balloon]:hover::after {
+      opacity: 1;
+      pointer-events: auto; }
+    [data-balloon][data-balloon-pos="up"]::before {
+      bottom: 100%;
+      left: 50%;
+      margin-bottom: 11px;
+      transform: translate3d(-50%, 10px, 0);
+      transform-origin: top; }
+    [data-balloon][data-balloon-pos="up"]::after {
+      bottom: 100%;
+      left: 50%;
+      margin-bottom: 5px;
+      transform: translate3d(-50%, 10px, 0);
+      transform-origin: top; }
+    [data-balloon][data-balloon-pos="up"]:hover::before {
+      transform: translate3d(-50%, 0, 0); }
+    [data-balloon][data-balloon-pos="up"]:hover::after {
+      transform: translate3d(-50%, 0, 0); }
+    [data-balloon][data-balloon-pos='down']::before {
+      left: 50%;
+      margin-top: 11px;
+      top: 100%;
+      transform: translate3d(-50%, -10px, 0); }
+    [data-balloon][data-balloon-pos='down']::after {
+      background: no-repeat url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(180 18 6)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>');
+      background-size: 100% auto;
+      width: 18px;
+      height: 6px;
+      left: 50%;
+      margin-top: 5px;
+      top: 100%;
+      transform: translate3d(-50%, -10px, 0); }
+    [data-balloon][data-balloon-pos='down']:hover::before {
+      transform: translate3d(-50%, 0, 0); }
+    [data-balloon][data-balloon-pos='down']:hover::after {
+      transform: translate3d(-50%, 0, 0); }
+
+
+   

@@ -1,0 +1,9 @@
+{
+    "WRONG_EMAIL" : "Wrong Email!",
+    "WRONG_PASSWORD": "Wrong password",
+    "DELETE_USER_SUCCESS" : "Delete successfully",
+    "TOKEN_NOT_VALID": "Token is not valid",
+    "REFRESH_TOKEN_NOT_VALID" : "Refresh token is not valid",
+    "LOGGED_OUT": "Logged out!",
+    "USER_ID_NOT_EXIST": "Wrong User ID"
+} 

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+#footer .key-tips {
+  line-height: 1.25rem;
+  margin-bottom: 2rem;
+  transition: 0.25s;
+  text-align: center;
+}
+
+#footer .key-tips span {
+  margin: 0 0.25rem;
+}
+
+#footer .left-right {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  user-select: none;
+}
+
+#footer .left-right .left {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  width: fit-content;
+  text-align: left;
+}
+
+#footer .left-right .left a {
+  align-items: baseline;
+  display: grid;
+  gap: 0.25rem;
+  grid-auto-flow: column;
+  width: max-content;
+}
+
+#footer .left-right a {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0;
+  text-decoration: none;
+}
+
+#footer .left-right a:hover {
+  color: var(--text-color);
+}
+
+#footer a {
+  color: var(--sub-color);
+  display: inline-block;
+  transition: 0.25s;
+}
+
+span {
+  background-color: var(--sub-color);
+  border-radius: 0.1rem;
+  color: var(--bg-color);
+  display: inline-block;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+  margin: 0 0.5rem;
+  padding: 0.1rem 0.3rem;
+}
